@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="Saul H. Suarez Florez" />
+  <title>Actualización y soluciones Moodle Como Manejo</title>
+  <style>
+    html {
+      line-height: 1.5;
+      font-family: Georgia, serif;
+      font-size: 20px;
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      word-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 1em;
+      }
+    }
+    @media print {
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
+      font-size: 85%;
+      margin: 0;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Actualización y soluciones Moodle Como Manejo</h1>
+<p class="author">Saul H. Suarez Florez</p>
+<p class="date">Diciembre 03, 2020</p>
+</header>
+<h2 id="indice">Indice</h2>
+<ul>
+<li><a href="#actualizacion">Actualización</a></li>
+<li><a href="#cargarUsuariosCSV">Cargar usuarios csv</a></li>
+<li><a href="#accionesMaisivasCSV">Acciones masivas CSV (Alternativa)</a>
+<ul>
+<li><a href="#forzarCambioContrasenaCSV">Forzar cambio contraseña CSV</a></li>
+<li><a href="#borradoMasivoUsers">Eliminar usuarios CSV</a></li>
+<li><a href="#desMatricularUsuarioCSV">Des-matricular usuarios CSV</a></li>
+<li><a href="#cambiarTemaUsuarioCSV">Cambiar tema de usuarios CSV</a></li>
+<li><a href="#borrarCursosCSV">Borrar cursos CSV</a></li>
+</ul></li>
+<li><a href="#noMostrarParticipantes">No mostrar participantes de un curso a otros participantes</a></li>
+<li><a href="#revisarCacheUsuarios">Revisar usuarios que quedan en cache</a></li>
+<li><a href="#bibliografia">Bibliografía y documentación</a></li>
+</ul>
+<h2 id="actualización"><a name="actualizacion">Actualización</a></h2>
+<p>Se actualizo el numero de ventas, el numero de soporte, el correo de soporte y la dirección.</p>
+<h2 id="cargar-usuarios-por-medio-de-un-archivo-csv"><a name="cargarUsuariosCSV">Cargar usuarios por medio de un archivo CSV</a></h2>
+<pre><code>Página Principal &gt; Administración del sitio &gt; Usuarios &gt; Cuentas &gt; Subir usuarios</code></pre>
+<h4 id="url">URL</h4>
+<p><a href="https://virtuales.comomanejo.com.co/admin/tool/uploaduser/index.php">https://virtuales.comomanejo.com.co/admin/tool/uploaduser/index.php</a></p>
+<p>Formato base usado por el archivo CSV recuerde colocar el encabezado con esto</p>
+<blockquote>
+<p>username;firstname;lastname;email</p>
+</blockquote>
+<p>Formato si desea agregar otros campos personalizados que previamente ya fueron agregados en campos de perfil del usuario otros campos.</p>
+<p><a href="https://virtuales.comomanejo.com.co/user/profile/index.php">https://virtuales.comomanejo.com.co/user/profile/index.php</a></p>
+<blockquote>
+<p>username;firstname;lastname;email;profile_field_xxxxx</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>donde xxxxx es el nombre corto del campo. para el caso de empresa seria profile_field_Empresa y profile_field_Hoja para la hoja de ruta.</p>
+</blockquote>
+</blockquote>
+<h4 id="archivo-ejemplo">Archivo ejemplo</h4>
+<p><a href="./listaUsuariosMasivos.csv">listaUsuariosMasivos.csv</a></p>
+<h2 id="acciones-masivas-csv-alternativa"><a name="accionesMaisivasCSV">Acciones masivas CSV (Alternativa)</a></h2>
+<h3 id="forzar-cambio-de-contraseña-csv"><a name="forzarCambioContrasenaCSV">Forzar cambio de contraseña CSV</a></h3>
+<p>Se puede forzar el cambio de contraseña de un grupo de usuarios por medio de un archivo CSV.</p>
+<pre><code>Página Principal &gt; Administración del sitio &gt; Usuarios &gt; Cuentas &gt; Subir usuarios</code></pre>
+<h4 id="url-1">URL</h4>
+<p><a href="https://virtuales.comomanejo.com.co/admin/tool/uploaduser/index.php">https://virtuales.comomanejo.com.co/admin/tool/uploaduser/index.php</a></p>
+<p>Formato usado por el archivo CSV recuerde colocar el encabezado con esto.</p>
+<blockquote>
+<p>username;password</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>username = Nombre de usuario de la plataforma password = contraseña actual del usuario</p>
+</blockquote>
+</blockquote>
+<h4 id="archivo-ejemplo-1">Archivo ejemplo</h4>
+<p><a href="./forzarCambioDePassword.csv">forzarCambioDePassword.csv</a></p>
+<h4 id="pasos">Pasos</h4>
+<h4 id="paso-1">Paso 1</h4>
+<p><img src="./forzarCambioDePassword1.png" title="forzaCambiodepassword 1" /></p>
+<h4 id="paso-2">Paso 2</h4>
+<p><img src="./forzarCambioDePassword2.png" title="forzaCambiodepassword 2" /></p>
+<h4 id="paso-3">Paso 3</h4>
+<p><img src="./forzarCambioDePassword3.png" title="forzaCambiodepassword 3" /></p>
+<h3 id="eliminar-usuarios-csv"><a name="borradoMasivoUsers">Eliminar usuarios CSV</a></h3>
+<p>Se puede eliminar usuarios en este enlace se se sube un archivo CSV.</p>
+<pre><code>Página Principal &gt; Administración del sitio &gt; Usuarios &gt; Cuentas &gt; Subir usuarios</code></pre>
+<h4 id="url-2">URL</h4>
+<p><a href="https://virtuales.comomanejo.com.co/admin/tool/uploaduser/index.php">https://virtuales.comomanejo.com.co/admin/tool/uploaduser/index.php</a></p>
+<p>Formato usado por el archivo CSV recuerde colocar el encabezado con esto.</p>
+<blockquote>
+<p>username;deleted</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>username = Nombre de usuario de la plataforma deleted = 1 para borrar</p>
+</blockquote>
+</blockquote>
+<h4 id="archivo-ejemplo-2">Archivo ejemplo</h4>
+<p><a href="./borradoMasivo.csv">borradoMasivo.csv</a></p>
+<h4 id="pasos-1">Pasos</h4>
+<h4 id="paso-1-1">Paso 1</h4>
+<figure>
+<img src="./borradoMasivo1.png" title="borrado masivo 1" alt="alt text" /><figcaption aria-hidden="true">alt text</figcaption>
+</figure>
+<h4 id="paso-2-1">Paso 2</h4>
+<figure>
+<img src="./borradoMasivo2.png" title="borrado masivo 2" alt="alt text" /><figcaption aria-hidden="true">alt text</figcaption>
+</figure>
+<h4 id="paso-3-1">Paso 3</h4>
+<figure>
+<img src="./borradoMasivo3.png" title="borrado masivo 3" alt="alt text" /><figcaption aria-hidden="true">alt text</figcaption>
+</figure>
+<h3 id="des-matricular-usuarios-csv"><a name="desMatricularUsuarioCSV">Des-matricular usuarios CSV</a></h3>
+<p><img src="https://i2.wp.com/www.silocreativo.com/wp-content/uploads/2017/11/ejemplo-pagina-error-404-creativo.png?fit=666%2C370&amp;quality=100&amp;strip=all&amp;ssl=1" /></p>
+<h3 id="cambiar-tema-de-usuarios-csv---no-recomendado-usar-esta-función-ya-que-cambia-la-imagen-corporativa-del-moodle-para-usuario"><a name="cambiarTemaUsuarioCSV">Cambiar tema de usuarios CSV - no recomendado usar esta función ya que cambia la imagen corporativa del moodle para usuario</a></h3>
+<p>Se puede cambiar el tema desde un archivo CSV</p>
+<pre><code>Página Principal &gt; Administración del sitio &gt; Usuarios &gt; Cuentas &gt; Subir usuarios</code></pre>
+<h4 id="url-3">URL</h4>
+<p><a href="https://virtuales.comomanejo.com.co/admin/tool/uploaduser/index.php">https://virtuales.comomanejo.com.co/admin/tool/uploaduser/index.php</a></p>
+<p>Formato usado por el archivo CSV recuerde colocar el encabezado con esto.</p>
+<blockquote>
+<p>username;firstname;lastname;email;theme</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>theme = el tema puede ser cualquiera de los siguientes</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>academi = el que contiene la imagen corporativa de comomanejo</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>boost</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>classic</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<h4 id="archivo-ejemplo-3">Archivo ejemplo</h4>
+<p><a href="./cambioTemaUsuarios.csv">cambioTemaUsuario.csv</a></p>
+<h4 id="pasos-2">Pasos</h4>
+<h4 id="paso-1-2">Paso 1</h4>
+<p><img src="./cambioTemaUsuarios1.png" title="cambioTemaUsuarios 1" /></p>
+<h4 id="paso-2-2">Paso 2</h4>
+<p><img src="./cambioTemaUsuarios2.png" title="cambioTemaUsuarios 2" /></p>
+<h4 id="paso-3---se-puede-notar-que-no-esta-habilitado-el-cambio-de-tema-para-los-usuarios">Paso 3 - se puede notar que no esta habilitado el cambio de tema para los usuarios</h4>
+<p><img src="./cambioTemaUsuarios3.png" title="cambioTemaUsuarios 3" /></p>
+<ul>
+<li><a href="https://virtuales.comomanejo.com.co/admin/settings.php?section=themesettings">Si desea habilitar la opcion de cambio de tema modifique el “permitir estilos al usuario” - note la advertencia en la descripción</a></li>
+<li><a href="https://docs.moodle.org/all/es/Configuraci%C3%B3n_de_temas#Permitir_temas_del_usuario">Permitir temas del usuario</a></li>
+</ul>
+<h3 id="borrar-cursos-csv"><a name="borrarCursosCSV">Borrar cursos CSV</a></h3>
+<p>Se puede eliminar cursos desde un archivo CSV</p>
+<pre><code>Página Principal &gt; Administración del sitio &gt; Cursos &gt; Subir cursos</code></pre>
+<h4 id="url-4">URL</h4>
+<p><a href="https://virtuales.comomanejo.com.co/admin/tool/uploadcourse/index.php">https://virtuales.comomanejo.com.co/admin/tool/uploadcourse/index.php</a></p>
+<p>Formato usado por el archivo CSV recuerde colocar el encabezado con esto (este proceso durante la eliminación puede llevar tiempo paciencia).</p>
+<blockquote>
+<p>shortname;delete</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>shortname = nombre corto de curso delete = 1 para borrar</p>
+</blockquote>
+</blockquote>
+<h4 id="archivo-ejemplo-4">Archivo ejemplo</h4>
+<p><a href="./deleteCurso.csv">deleteCurso.csv</a></p>
+<h4 id="pasos-3">Pasos</h4>
+<h4 id="paso-1-3">Paso 1</h4>
+<p><img src="./deleteCurso1.png" title="delete 1" /></p>
+<h4 id="paso-2-3">Paso 2</h4>
+<p><img src="./deleteCurso2.png" title="delete 2" /></p>
+<h2 id="no-mostrar-participantes-de-un-curso-a-otros-participantes"><a name="noMostrarParticipantes">No mostrar participantes de un curso a otros participantes</a></h2>
+<p>Para ello al rol de estudiante se le modificaron los siguientes permisos.</p>
+<h3 id="url-5">Url</h3>
+<p><a href="https://virtuales.comomanejo.com.co/admin/roles/define.php?action=edit&amp;roleid=5">https://virtuales.comomanejo.com.co/admin/roles/define.php?action=edit&amp;roleid=5</a></p>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Actual</th>
+<th>Por defecto</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><img src="./noMostrarAlumnos.png" title="not show student" alt="alt text" /></td>
+<td>Creador de curso, Profesor, Profesor sin permiso de edición, Estudiante</td>
+</tr>
+<tr class="even">
+<td><img src="./noMostrarAlumnos2.png" title="not show student 2" alt="alt text" /></td>
+<td><img src="./noMostrarAlumnos3.png" title="not show student 3" alt="alt text" /></td>
+</tr>
+<tr class="odd">
+<td><img src="./noMostrarAlumnos4.png" title="not show student 4" alt="alt text" /></td>
+<td><img src="./noMostrarAlumnos5.png" title="not show student 5" alt="alt text" /></td>
+</tr>
+<tr class="even">
+<td><img src="./noMostrarAlumnos6.png" title="not show student 6" alt="alt text" /></td>
+<td><img src="./noMostrarAlumnos7.png" title="not show student 7" alt="alt text" /></td>
+</tr>
+<tr class="odd">
+<td><img src="./noMostrarAlumnos8.png" title="not show student 8" alt="alt text" /></td>
+<td><img src="./noMostrarAlumnos9.png" title="not show student 9" alt="alt text" /></td>
+</tr>
+</tbody>
+</table>
+<h2 id="revisar-usuarios-que-quedan-en-cache"><a name="revisarCacheUsuarios">Revisar usuarios que quedan en cache</a></h2>
+<p>Se habla de eliminar los usuarios asociados a un curso cuando este se elimina, algo que desde mi punto de vista no debe ser, ya que esos usuarios pueden estar asociados a otros cursos y por eso mismo generar conflictos cuando se consulte la información en otro curso (por ellos no se eliminan los usuarios).</p>
+<ul>
+<li>una solución es cargar un csv con los usuarios pertenecientes al curso que se quiere eliminar <a href="#borradoMasivoUsers">ver</a></li>
+</ul>
+<h1 id="vea"><a name="bibliografia">Vea</a></h1>
+<ul>
+<li><a href="https://docs.moodle.org/all/es/38/Subir_usuarios#Archivo_de_subida_v.C3.A1lido_para_pruebas">subir usuarios moodle 7.8 y 3.9</a></li>
+<li><a href="https://docs.moodle.org/all/es/Archivo_plano">inscripción masiva (inscribir o des-inscribir) de usuarios existentes en cursos existentes mediante un archivo CSV</a></li>
+<li><a href="https://docs.moodle.org/all/es/Subir_cursos">subir cursos moodle</a></li>
+</ul>
+</body>
+</html>
