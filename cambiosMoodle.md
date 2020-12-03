@@ -41,10 +41,18 @@ agregados en campos de perfil del usuario otros campos.
 > username;firstname;lastname;email;profile_field_xxxxx
 
 >> donde xxxxx es el nombre corto del campo.
+
 >> para el caso de empresa seria profile_field_Empresa y profile_field_Hoja para la hoja de ruta.
 
 #### Archivo ejemplo
 [listaUsuariosMasivos.csv](./listaUsuariosMasivos.csv)
+
+#### Pasos
+#### Paso 1
+![](./listaUsuariosMasivos1.png "listaUsuariosMasivos1")
+
+#### Paso 2
+![](./listaUsuariosMasivos2.png "listaUsuariosMasivos2")
 
 ## <a name="accionesMaisivasCSV">Acciones masivas CSV (Alternativa)</a>
 ### <a name="forzarCambioContrasenaCSV">Forzar cambio de contraseña CSV</a>
@@ -61,6 +69,7 @@ Formato usado por el archivo CSV recuerde colocar el encabezado con esto.
 > username;password
 
 >> username = Nombre de usuario de la plataforma
+
 >> password = contraseña actual del usuario
 
 #### Archivo ejemplo
@@ -90,6 +99,7 @@ Formato usado por el archivo CSV recuerde colocar el encabezado con esto.
 > username;deleted
 
 >> username = Nombre de usuario de la plataforma
+
 >> deleted = 1 para borrar
 
 #### Archivo ejemplo
@@ -97,13 +107,13 @@ Formato usado por el archivo CSV recuerde colocar el encabezado con esto.
 
 #### Pasos
 #### Paso 1
-![alt text](./borradoMasivo1.png "borrado masivo 1")
+![](./borradoMasivo1.png "borrado masivo 1")
 
 #### Paso 2
-![alt text](./borradoMasivo2.png "borrado masivo 2")
+![](./borradoMasivo2.png "borrado masivo 2")
 
 #### Paso 3
-![alt text](./borradoMasivo3.png "borrado masivo 3")
+![](./borradoMasivo3.png "borrado masivo 3")
 
 ### <a name="desMatricularUsuarioCSV">Des-matricular usuarios CSV</a>
 ![](https://i2.wp.com/www.silocreativo.com/wp-content/uploads/2017/11/ejemplo-pagina-error-404-creativo.png?fit=666%2C370&quality=100&strip=all&ssl=1)
@@ -162,6 +172,7 @@ Formato usado por el archivo CSV recuerde colocar el encabezado con esto
 > shortname;delete
 
 >> shortname = nombre corto de curso
+
 >> delete = 1 para borrar
 
 #### Archivo ejemplo
@@ -182,11 +193,11 @@ Para ello al rol de estudiante se le modificaron los siguientes permisos.
 
 Actual | Por defecto
 --|--
-![alt text](./noMostrarAlumnos.png "not show student") | Creador de curso, Profesor, Profesor sin permiso de edición, Estudiante
-![alt text](./noMostrarAlumnos2.png "not show student 2") | ![alt text](./noMostrarAlumnos3.png "not show student 3")
-![alt text](./noMostrarAlumnos4.png "not show student 4") | ![alt text](./noMostrarAlumnos5.png "not show student 5")
-![alt text](./noMostrarAlumnos6.png "not show student 6") | ![alt text](./noMostrarAlumnos7.png "not show student 7")
-![alt text](./noMostrarAlumnos8.png "not show student 8") | ![alt text](./noMostrarAlumnos9.png "not show student 9")
+![](./noMostrarAlumnos.png "not show student") | Creador de curso, Profesor, Profesor sin permiso de edición, Estudiante
+![](./noMostrarAlumnos2.png "not show student 2") | ![](./noMostrarAlumnos3.png "not show student 3")
+![](./noMostrarAlumnos4.png "not show student 4") | ![](./noMostrarAlumnos5.png "not show student 5")
+![](./noMostrarAlumnos6.png "not show student 6") | ![](./noMostrarAlumnos7.png "not show student 7")
+![](./noMostrarAlumnos8.png "not show student 8") | ![](./noMostrarAlumnos9.png "not show student 9")
 
 ## <a name="revisarCacheUsuarios">Revisar usuarios que quedan en cache</a>
 Se habla de eliminar los usuarios asociados a un curso cuando este se elimina,
