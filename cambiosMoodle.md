@@ -116,7 +116,20 @@ Formato usado por el archivo CSV recuerde colocar el encabezado con esto.
 ![](./assets/image/borradoMasivo3.png "borrado masivo 3")
 
 ### <a name="desMatricularUsuarioCSV">Des-matricular usuarios CSV</a> [🔝](#top)
-![](https://i2.wp.com/www.silocreativo.com/wp-content/uploads/2017/11/ejemplo-pagina-error-404-creativo.png?fit=666%2C370&quality=100&strip=all&ssl=1)
+Por el momento no encuentro una solución para des-matricular por medio de un csv.
+se puede des-matricular de forma masiva desde el administrador del curso.
+```
+Página Principal > Cursos > NombreCategory > NombreCurso > Administración del curso
+```
+
+#### Usuarios matriculados
+![](./assets/image/desmatricularUsuarios1.png)
+
+#### Filtros - todos - métodos de matriculación - matricula manual
+![](./assets/image/desmatricularUsuarios2.png)
+
+#### Selecciona los usuarios y eliminar
+![](./assets/image/desmatricularUsuarios3.png)
 
 ### <a name="cambiarTemaUsuarioCSV">Cambiar tema de usuarios CSV - no recomendado usar esta función ya que cambia la imagen corporativa del moodle para usuario</a> [🔝](#top)
 Se puede cambiar el tema desde un archivo CSV
